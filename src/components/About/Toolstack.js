@@ -1,31 +1,28 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { DiGithubBadge } from "react-icons/di";
-import {
-  SiLinux,
-  SiVisualstudiocode,
-  SiPostman,
-  SiHeroku,
-  SiVercel,
-} from "react-icons/si";
+import linux from "../../Assets/gifs/linux.gif";
+import code from "../../Assets/gifs/code.gif";
+import postman from "../../Assets/gifs/postman.gif";
+import heroku from "../../Assets/gifs/heroku2.png";
+import github from "../../Assets/gifs/github.gif";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGithubBadge />
+        <img src={linux} width="100px" alt="Linux" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <img src={code} width="100px" alt="Linux" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
+        <img src={postman} width="150px" alt="Postman" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
+        <img src={github} width="100px" alt="Github" />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiHeroku />
+        <img src={heroku} width="100px" alt="Heroku" />
       </Col>
     </Row>
   );
