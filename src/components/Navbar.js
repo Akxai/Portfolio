@@ -50,7 +50,7 @@ function NavBar() {
           }}
         >
           <div className="icon-container" onClick={handleClick}>
-            <MdOutlineKeyboardArrowDown
+            <RiMenu4Fill
               style={{ color: "white", fontSize: "30px" }}
               className={isRotated ? "rotated-icon" : "normal-icon"}
             />
