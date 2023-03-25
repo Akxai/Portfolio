@@ -14,6 +14,10 @@ html {
   --imp-text-color: #408e91;
 }
 
+body {
+  /* background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png"); */
+}
+
 .purple {
   color: var(--imp-text-color) !important;
 }
@@ -75,6 +79,28 @@ button:focus {
 /* --------- */
 /* Navbar Section  */
 /* --------- */
+
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.rotate-right {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.rotate-left {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .sticky {
   background-color: #1e2530 !important;
   transition: all 0.3s ease-out 0s !important;
@@ -138,6 +164,21 @@ button:focus {
   top: 10px !important;
   transform: rotate(-135deg) !important;
   opacity: 0.9 !important;
+}
+
+/* Navbar  */
+
+.icon-container {
+  display: inline-block;
+}
+
+.normal-icon {
+  transition: transform 0.3s ease-out;
+}
+
+.rotated-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in;
 }
 
 @media (max-width: 767px) {

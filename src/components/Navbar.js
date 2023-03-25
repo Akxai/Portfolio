@@ -7,13 +7,10 @@ import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { BiHomeAlt } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
+import logo from "../../src/Assets/logo.png";
+import { RiMenu4Fill } from "react-icons/ri";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { AiFillStar, AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
 
@@ -30,7 +27,11 @@ function NavBar() {
   }
 
   window.addEventListener("scroll", scrollHandler);
+  const [isRotated, setIsRotated] = useState(false);
 
+  const handleClick = () => {
+    setIsRotated(!isRotated);
+  };
   return (
     <Navbar
       expanded={expand}
@@ -39,19 +40,24 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        {/* <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand href="/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />
-        </Navbar.Brand> */}
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
             updateExpanded(expand ? false : "expanded");
           }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <div className="icon-container" onClick={handleClick}>
+            <MdOutlineKeyboardArrowDown
+              style={{ color: "white", fontSize: "30px" }}
+              className={isRotated ? "rotated-icon" : "normal-icon"}
+            />
+          </div>
+          {/* <RiMenu4Fill style={{ color: "white", fontSize: "30px" }} /> */}
         </Navbar.Toggle>
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>

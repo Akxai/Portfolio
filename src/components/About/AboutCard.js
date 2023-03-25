@@ -13,7 +13,8 @@ function AboutCard() {
             <br />I am an Under Graduate Student pursuing B.E.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            Besides programming, there are several other activities that I enjoy
+            engaging in
           </p>
           <ul>
             <li className="about-activity">
